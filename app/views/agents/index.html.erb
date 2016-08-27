@@ -1,0 +1,34 @@
+<h1>Agent Applications Dashboard</h1>
+<p class="notice_msg"> 
+<i> NOTE:: (Assumption) </i> <u> Admin team of Cloud Monitor Server application needs to have access to data of Agent Applications for verification or correction purpose </u>
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Aws region</th>
+      <th>Aws access key</th>
+      <th>Aws secret</th>
+      <th>Server access token</th>
+      <th colspan="2"> Actions </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agents.each do |agent| %>
+      <tr>
+        <td><%= agent.name %></td>
+        <td><%= agent.aws_region %></td>
+        <td><%= agent.aws_access_key %></td>
+        <td><%= agent.aws_secret %></td>
+        <td><%= agent.server_access_token %></td>
+        <td><%= link_to 'Show', agent %></td>
+        <td><%= link_to 'Edit', edit_agent_path(agent) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agent', new_agent_path %>

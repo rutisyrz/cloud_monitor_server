@@ -1,0 +1,14 @@
+# Add configuration values here, as shown below.
+
+development:
+  
+
+staging:
+  SECRET_KEY_BASE: 8667574d38ee6317060eb5402baac15f8632518574d03c73c4c94e0bc2f7048a26fe59ecd197f4bb58b56101d860728ecff5dc65a6af1a23c7beb7ea2ee35a0d
+  
+
+test:
+  
+
+production:  
+  SECRET_KEY_BASE: 0cba11ef37d1c196828c0f84317240be9b11009db3c56016bf896f630aa13c71593c5df1faa08595e73a2fbebd747083799761f5036e451ec03d4d95f7d05258  

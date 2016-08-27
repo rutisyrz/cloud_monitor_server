@@ -1,0 +1,46 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  aws:
+    common:
+      codes:
+        custom_exception: CustomException        
+      errors:
+        invalid_agent_app: Sorry, it seems like your application is not registered with Cloud Monitor server application
+        missing_agent_token: Please pass Server Access Token
+        custom_exception: Please send valid API parameters and Try Again!
+    ec2:
+      codes:
+        not_found: NotFound
+      errors:
+        instance_pending: EC2 instance %{instance_id} is pending, so it will be running in a bit
+        instance_shutting_down: EC2 instance %{instance_id} is shutting-down, so you cannot start/stop it
+        instance_terminated: EC2 instance %{instance_id} is terminated, so you cannot start/stop it
+        instance_stopping: EC2 instance %{instance_id} is stopping, so it will be stopped in a bit
+        instance_stopped: EC2 instance %{instance_id} is already stopped
+        instance_started: EC2 instance %{instance_id} is already started
+        instance_not_exists: EC2 instance %{instance_id} does not exist
+        invalid_dimensions: For metric %{metric_name}, expected dimensions are %{dimensions}
+    cloud_watch:      
+      codes:
+        invalid_argument: InvalidArgument        
+

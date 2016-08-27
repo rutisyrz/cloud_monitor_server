@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+<p class="notice_msg"><i> 
+  
+  Congratulations! Your application has been successfully registered. <br />
+  You can now access Cloud Monitor APIs using <b>Server Access Token</b>.  <br />
+  No need to pass <b> AWS Access Key </b> and <b> AWS Secret Key </b> in API requests.
+  
+</i></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @agent.name %>
+</p>
+
+<p>
+  <strong>Aws region:</strong>
+  <%= @agent.aws_region %>
+</p>
+
+<p>
+  <strong>Aws access key:</strong>
+  <%= @agent.aws_access_key %>
+</p>
+
+<p>
+  <strong>Aws secret:</strong>
+  <%= @agent.aws_secret %>
+</p>
+
+<p>
+  <strong>Server access token:</strong>
+  <%= @agent.server_access_token %>
+</p>
+
