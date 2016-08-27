@@ -125,6 +125,21 @@ development:
 
     # Ensure all times are UTC in the app side. (default: false)
     # use_utc: false
+staging:
+  clients:
+    default:
+      database: cloud_monitor_agent_staging
+      hosts:
+        - localhost:27017
+      options:
+ 
+production:
+  clients:
+    default:
+      database: cloud_monitor_agent_staging
+      hosts:
+        - localhost:27017
+      options: 
 test:
   clients:
     default:
