@@ -1,7 +1,10 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
-  protect_from_forgery with: :exception  
+  
+  # protect_from_forgery with: :exception  
+
+  protect_from_forgery with: :null_session, if: Proc.new { |c| c.request.format == 'application/json' }
 
   def validate_agent_app_and_set_aws_access_details
   	result = {error: {} }
@@ -16,6 +19,11 @@ class ApplicationController < ActionController::Base
   	end
 
   	render json: result, status: 404 and return if result[:error].present?
+  end
+
+  def decode_params
+    arguments = Rack::Utils.parse_nested_query(request.query_parameters["arguments"])
+    params.merge!(arguments)
   end
 
 end

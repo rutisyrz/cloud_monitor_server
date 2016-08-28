@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'ec2/instance'
 
   get 'cloud_watch/metrics'
-  get 'cloud_watch/statistics'
+  post 'cloud_watch/statistics'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
