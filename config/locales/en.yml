@@ -31,6 +31,7 @@ en:
     ec2:
       codes:
         not_found: NotFound
+        invalid_instance: InvalidInstanceID
       errors:
         instance_pending: EC2 instance %{instance_id} is pending, so it will be running in a bit
         instance_shutting_down: EC2 instance %{instance_id} is shutting-down, so you cannot start/stop it

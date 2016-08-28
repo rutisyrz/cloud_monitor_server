@@ -60,6 +60,8 @@ class AwsHelper::EC2Instance < AwsHelper::EC2
 				return {error: {code: I18n.t("aws.ec2.codes.not_found"), message: I18n.t("aws.ec2.errors.instance_not_exists", instance_id: @instance_id)}}
 			end
 			return {error: {} }
+		rescue Aws::EC2::Errors::InvalidInstanceIDMalformed => e
+			return {error: {code: I18n.t("aws.common.codes.invalid_instance"), message: e.message}, result: []}
 		rescue Exception => e
 			return {error: {code: I18n.t("aws.common.codes.custom_exception"), message: I18n.t("aws.common.errors.custom_exception")}, result: []}
 		end
