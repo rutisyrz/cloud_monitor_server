@@ -128,7 +128,7 @@ development:
 staging:
   clients:
     default:
-      database: cloud_monitor_agent_staging
+      database: cloud_monitor_server_staging
       hosts:
         - localhost:27017
       options:
@@ -136,7 +136,7 @@ staging:
 production:
   clients:
     default:
-      database: cloud_monitor_agent_staging
+      database: cloud_monitor_server_staging
       hosts:
         - localhost:27017
       options: 
