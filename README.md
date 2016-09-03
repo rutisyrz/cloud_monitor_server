@@ -25,6 +25,12 @@ AWS-SDK(Ruby) integration and REST APIs to access AWS services
 $ rm /var/tmp/aws-mon/instance-id.
 ```
 
+## What is CloudWatch Custom Metrics?
+- AWS CloudWatch does not provide these Metrics - *Disk Space Utilization (%)*, *Disk Space Used (GB)*, *Disk Space Available (GB)*, *Memory Utilization (%)*, *Memmory Used (MB)*, *Memmory Available (MB)*, *Swap Utilization (%)*, *Swap Used (MB)*
+- To populate the same for detailed monitoring of EC2 servers, AWS provides a Monitoring script (written in Perl) to produce custom metrics for EC2 Linux based instances.
+- Custom metrics, once populated by script, can be found under **Linux System** section on *CloudWatch* dashboard
+- AWS CloudWatch Custom Metrics pricing - [click here](https://aws.amazon.com/cloudwatch/pricing/)
+
 ## Setup code
 
 - Install bundle
