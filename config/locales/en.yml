@@ -24,6 +24,7 @@ en:
     common:
       codes:
         custom_exception: CustomException        
+        incorrect_instance_state: IncorrectInstanceState
       errors:
         invalid_agent_app: Sorry, it seems like your application is not registered with Cloud Monitor server application
         missing_agent_token: Please pass Server Access Token
